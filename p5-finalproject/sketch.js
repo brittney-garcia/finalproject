@@ -2,9 +2,9 @@
 var coins;
 var player;
 //starting score
-var score = 0;
+var score = 20;
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(windowWidth, windowHeight);
   coins = new Group();
   for (var i = 0; i < 20; i++) {
 //cluster spacing
@@ -16,10 +16,16 @@ function setup() {
     c.shapeColor = color(255, 255, 255);
     coins.add(c);
   }
+  //ADD IMAGINE IN PLACE OF SPRITE?
   player = createSprite(50, 50, 40, 40);
 	//square color
-  player.shapeColor = color(255, 0, 0);
+  player.shapeColor = color(255, 255, 255);
+
+  var button = createButton ("reset");
+  button.mousePressed(setup);
+
 }
+
 function draw() {
   background(0, 0, 0);
   player.velocity.x =
@@ -37,10 +43,11 @@ function draw() {
     text(score, width/2, height/2);
   }
   else {
-    text("you win!", width/2, height/2);
+    text("don't reset me", width/2, height/2);
   }
 }
 function getCoin(player, coin) {
   coin.remove();
-  score += 1;
+  //subtract or add total points
+  score -= 1;
 }
