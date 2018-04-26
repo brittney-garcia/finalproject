@@ -13,7 +13,13 @@ function setup() {
       random(50, height-50),
       10, 10);
 			//coin color
-    c.shapeColor = color(255, 255, 255);
+
+      var col = {
+        r: random(255),
+        g: random(255),
+        b: random(255),
+      }
+    c.shapeColor = color(col.r, col.g, col.b);
     coins.add(c);
   }
   //ADD IMAGINE IN PLACE OF SPRITE?
