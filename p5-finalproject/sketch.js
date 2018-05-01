@@ -4,7 +4,8 @@ var player;
 //starting score
 var score = 20;
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1200, 600);
+  
   coins = new Group();
   for (var i = 0; i < 20; i++) {
 //cluster spacing
