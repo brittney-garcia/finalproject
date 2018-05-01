@@ -5,7 +5,13 @@ var player;
 var score = 20;
 function setup() {
   createCanvas(1200, 600);
-  
+
+  function mousePressed() {
+  if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
+    var fs = fullscreen();
+    fullscreen(!fs);
+  }
+}
   coins = new Group();
   for (var i = 0; i < 20; i++) {
 //cluster spacing
@@ -30,6 +36,7 @@ function setup() {
 
   var button = createButton ("reset");
   button.mousePressed(setup);
+   button.position(750, 650);
 
 }
 
