@@ -4,7 +4,7 @@ var player;
 //starting score
 var score = 20;
 function setup() {
-  createCanvas(1200, 600);
+  createCanvas(1200, 800);
 
   function mousePressed() {
   if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
