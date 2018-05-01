@@ -4,7 +4,7 @@ var player;
 //starting score
 var score = 20;
 function setup() {
-  createCanvas(1200, 650);
+  createCanvas(1200, 700);
 
   function mousePressed() {
   if (mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseY < 100) {
@@ -36,7 +36,7 @@ function setup() {
 
   var button = createButton ("reset");
   button.mousePressed(setup);
-   button.position(750, 600);
+   button.position(700, 600);
 
 }
 
