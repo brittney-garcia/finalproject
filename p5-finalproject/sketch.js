@@ -36,7 +36,7 @@ function setup() {
 
   var button = createButton ("reset");
   button.mousePressed(setup);
-   button.position(750, 650);
+   button.position(750, 600);
 
 }
 
